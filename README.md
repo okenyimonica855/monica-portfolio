@@ -1,21 +1,17 @@
-# Monica Okenyi — V3 GitHub Portfolio
+# Monica Okenyi Portfolio — GitHub Pages
 
-A multi-page, motion-led Customer Success portfolio designed to feel like a real editorial website rather than a PDF/Canva deck.
+This is the multi-page GitHub Pages version of Monica Okenyi's Customer Success portfolio.
 
 ## Pages
 - `index.html` — Home
-- `about.html` — About + human section
-- `experience.html` — Animated metrics + career timeline
-- `work.html` — Portfolio projects
-- `nubian-skin.html` — Cora × Nubian Skin case study
-- `nova-health.html` — Nova Health case study
-- `skills.html` — Skills, tools, certifications
-- `contact.html` — Contact
+- `about.html` — About and personal story
+- `experience.html` — Full experience timeline
+- `work.html` — Cora product context plus Nubian Skin and Nova Health case studies
+- `skills.html` — Skills, tools and certifications
+- `contact.html` — Contact form and LinkedIn
 
-## Before publishing
-1. Replace the email placeholder in `contact.html`.
-2. Add your LinkedIn URL and CV URL.
-3. Replace the “Coming soon” human-section items with your actual current read/movie/show.
-4. Upload the whole folder contents to the GitHub repo root. Keep the `assets` folder.
-
-The Nubian Skin and Nova Health case studies are explicitly marked as simulated portfolio cases.
+## Notes
+- Keep every file in the repository root so the relative links and assets work on GitHub Pages.
+- `nubian-skin-project.pdf` and `nova-health-project.pdf` are the original case-study presentations.
+- `cora-dashboard.png`, `cora-pricing.png` and `monica-portrait.jpg` are local assets.
+- The design uses Instrument Serif for display headings and DM Sans for body/interface text.
