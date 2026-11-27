@@ -60,19 +60,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     observer.observe(el);
   });
 
-  // Desktop visitors can reveal the portrait by hovering; touch users tap to toggle it.
-  document.querySelectorAll('.portrait-toggle').forEach(button=>{
-    const stage=button.closest('.portrait-stage');
-    button.addEventListener('click',()=>{
-      if(!stage)return;
-      const active=stage.classList.toggle('is-color');
-      button.setAttribute('aria-pressed',String(active));
-      button.setAttribute('aria-label',active?'Show portrait in black and white':'Reveal Monica\'s portrait in full colour');
-      const prompt=button.querySelector('.portrait-prompt');
-      if(prompt)prompt.textContent=active?'Tap to return to black & white ↗':'Tap to bring the colour in ↗';
-    });
-  });
-
   const progress=document.createElement('div');
   progress.className='progress';
   document.body.appendChild(progress);
