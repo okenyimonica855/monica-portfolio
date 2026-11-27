@@ -619,3 +619,134 @@ main{padding-top:76px}
  .home-hero .hero-index{gap:10px}
  .contact-page .contact-link{font-size:1.2rem}
 }
+
+/* Orange + forest-green refinement: high contrast, clearer project storytelling */
+:root{
+ --orange:#ed713b;
+ --orange-deep:#d75b2f;
+ --orange-soft:#ffe0cc;
+ --green:#183d30;
+ --green2:#0c251d;
+ --lime:#b9df6c;
+}
+.home-hero{
+ background:linear-gradient(112deg,#ef7138 0%,#dc5d32 28%,#24503b 68%,#10271e 100%);
+}
+.home-hero:before{
+ background:radial-gradient(ellipse at 16% 28%,rgba(255,176,111,.38),transparent 43%),radial-gradient(ellipse at 83% 22%,rgba(4,19,13,.62),transparent 46%);
+}
+.home-hero .hero-glow{background:radial-gradient(circle,rgba(255,176,111,.16),transparent 68%)}
+.home-hero .hero-years span,.home-hero .hero-index b{color:#ffe1c7}
+.home-hero h1 span{color:#ffe0c5}
+.home-hero .hero-side-copy h2{color:#fff}
+.home-hero .hero-side-copy p{color:rgba(255,255,255,.86)}
+.home-hero .hero-note{border-left-color:#ffd3ae;color:rgba(255,255,255,.9)}
+.home-hero .btn.ghost{border-color:rgba(255,255,255,.72);color:#fff}
+.home-hero .btn.primary{background:#fff8f1;border-color:#fff8f1;color:#1b2e23}
+.home-hero .hero-index{background:rgba(9,27,18,.27)}
+.home-page .work-section .section-head>p{max-width:540px;line-height:1.85;color:#4e5d52}
+.home-page .work-section .project-card{
+ min-height:355px;padding:34px 32px;border-radius:0;
+ display:flex;flex-direction:column;justify-content:space-between;
+ border:1px solid transparent;box-shadow:none;transition:transform .35s var(--ease),box-shadow .35s,border-color .35s;
+}
+.home-page .work-section .project-card h3{
+ max-width:19ch;font-size:clamp(1.65rem,2.35vw,2.15rem);line-height:1.13;text-wrap:balance;
+}
+.home-page .work-section .project-card p{max-width:48ch;font-size:13px;line-height:1.8}
+.home-page .work-section .project-card.featured{
+ background:linear-gradient(135deg,#f17a42,#ee9a61);color:#18251d;border-color:#ed713b;
+}
+.home-page .work-section .project-card.featured .card-meta{color:#254a35}
+.home-page .work-section .project-card.featured h3{color:#18251d}
+.home-page .work-section .project-card.featured p{color:#263b2e}
+.home-page .work-section .project-card.featured .chip{border-color:rgba(24,37,29,.45);color:#18251d}
+.home-page .work-section .project-card.project-nova{
+ background:#143729;color:#fff;border-color:#28523e;
+}
+.home-page .work-section .project-card.project-nova .card-meta{color:#c8e695}
+.home-page .work-section .project-card.project-nova h3{color:#fff}
+.home-page .work-section .project-card.project-nova p{color:rgba(255,255,255,.76)}
+.home-page .work-section .project-card.project-nova .chip{border-color:rgba(255,255,255,.55);color:#fff}
+.home-page .work-section .project-card:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(17,48,31,.16)}
+.transition-section{
+ display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:center;
+ padding:62px 5.1%;background:#f1eee4;color:#17251d;
+ border-bottom:1px solid #d9ded3;
+}
+.transition-heading .kicker{color:var(--orange-deep)}
+.transition-heading h2{font:800 clamp(2rem,3.4vw,3.45rem)/1.04 Manrope,sans-serif;letter-spacing:-.075em;max-width:570px;margin:10px 0 0}
+.transition-copy{padding-left:28px;border-left:2px solid var(--orange)}
+.transition-copy p{font-size:14px;line-height:1.9;color:#45534a;max-width:620px;margin:0 0 12px}
+.transition-copy p:last-child{margin-bottom:0}
+.home-page .work-section .kicker{color:var(--orange-deep)}
+.home-page .work-section .section-head h2{max-width:620px}
+.home-page .work-section .card-meta{font-size:10px}
+.home-page .work-section .project-card .chips{gap:8px}
+.home-page .work-section .project-card .chip{padding:6px 9px}
+.work-page .case-selection-section{background:#10271e;color:#fff;padding-left:5.1%;padding-right:5.1%;margin:20px 0 0}
+.work-page .case-selection-section .section-head>p{color:rgba(255,255,255,.7)}
+.work-page .case-selection-section .kicker{color:#f5a16c}
+.work-page .case-selection-section .project-card{
+ min-height:345px;padding:32px;border-radius:0;box-shadow:none;
+}
+.work-page .case-selection-section .project-card.featured{
+ background:linear-gradient(135deg,#f17a42,#ee9a61);border-color:#ed713b;color:#18251d;
+}
+.work-page .case-selection-section .project-card.featured .card-meta,
+.work-page .case-selection-section .project-card.featured h3{color:#18251d}
+.work-page .case-selection-section .project-card.featured p{color:#263b2e}
+.work-page .case-selection-section .project-card.featured .chip{color:#18251d;border-color:rgba(24,37,29,.4)}
+.work-page .case-selection-section .project-card.project-nova{background:#1c4433;border-color:#345c46;color:#fff}
+.work-page .case-selection-section .project-card.project-nova .card-meta{color:#c8e695}
+.work-page .case-selection-section .project-card.project-nova h3{color:#fff}
+.work-page .case-selection-section .project-card.project-nova p{color:rgba(255,255,255,.76)}
+.work-page .case-selection-section .project-card.project-nova .chip{color:#fff;border-color:rgba(255,255,255,.5)}
+.work-page .case-selection-section .project-card:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(0,0,0,.17)}
+.about-page .story-bridge-section{
+ display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:30px 0 55px;
+ border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.about-page .story-bridge-item{padding:8px 28px 8px 0;background:transparent;border:0;box-shadow:none}
+.about-page .story-bridge-item+ .story-bridge-item{padding-left:36px;border-left:1px solid var(--line)}
+.about-page .story-bridge-index{display:block;font:800 9px Manrope,sans-serif;letter-spacing:.13em;color:var(--orange-deep);margin-bottom:15px}
+.about-page .story-bridge-item h3{font:500 clamp(1.75rem,2.8vw,2.45rem)/1.12 'Playfair Display',serif;color:var(--green);max-width:19ch;margin:0 0 12px}
+.about-page .story-bridge-item p{font-size:13px;line-height:1.85;color:#59645a;max-width:49ch;margin:0}
+.about-page .project-card{
+ min-height:0!important;padding:24px 0!important;
+ background:transparent!important;border:0!important;border-top:1px solid var(--line)!important;
+ box-shadow:none!important;color:var(--ink)!important;transform:none!important;
+}
+.about-page .project-card:before{display:none}
+.about-page .project-card .card-meta{color:var(--orange-deep)}
+.about-page .project-card h3{color:var(--green)}
+.about-page .project-card p{color:#59645a}
+.about-page .project-card:hover{box-shadow:none!important;transform:none!important}
+.about-page .grid-2,.about-page .grid-3{gap:30px 42px}
+.about-page .grid-2 .project-card.featured{background:transparent!important;color:var(--ink)!important}
+.about-page .grid-2 .project-card.featured h3,.about-page .grid-2 .project-card.featured p{color:inherit}
+.footer.wrap{
+ width:100%;max-width:none;margin:0;padding:28px max(32px,calc((100vw - var(--max))/2)) 34px;
+ background:#10271e;border-color:rgba(255,255,255,.14);color:rgba(255,255,255,.7);
+}
+.footer a,.footer a:visited,.footer a:hover,.footer a:focus{
+ color:#ffad79!important;text-decoration:none;opacity:1;
+}
+.home-page .footer.wrap{background:#0b1711;color:rgba(255,255,255,.7)}
+.home-page .footer a,.home-page .footer a:visited,.home-page .footer a:hover{color:#ffad79!important}
+@media(max-width:950px){
+ .transition-section{grid-template-columns:1fr;gap:18px}
+ .transition-copy{padding-left:20px}
+ .home-page .work-section .project-card,.work-page .case-selection-section .project-card{min-height:320px}
+}
+@media(max-width:700px){
+ .transition-section{grid-template-columns:1fr;gap:16px;padding:44px 22px}
+ .transition-heading h2{font-size:2.5rem}
+ .transition-copy{padding-left:17px}
+ .home-page .work-section .project-card,.work-page .case-selection-section .project-card{min-height:300px;padding:25px 22px}
+ .about-page .story-bridge-section{grid-template-columns:1fr;gap:23px;padding:24px 0 38px}
+ .about-page .story-bridge-item{padding:5px 0 22px}
+ .about-page .story-bridge-item+ .story-bridge-item{padding:22px 0 0;border-left:0;border-top:1px solid var(--line)}
+ .about-page .grid-2,.about-page .grid-3{gap:20px}
+ .footer.wrap{padding:25px 20px 30px}
+}
