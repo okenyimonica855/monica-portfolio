@@ -206,3 +206,10 @@ main{padding-top:82px}.eyebrow,.kicker{font-family:Manrope,sans-serif;font-size:
  .tools-catalog{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){.marquee-track,.floating-note{animation:none!important}}
+
+.tools-catalog{grid-template-columns:repeat(2,minmax(0,1fr))}
+.tools-category .tool-grid{grid-template-columns:1fr}
+.tool-intro{font-size:12px;color:var(--muted);max-width:540px;margin:10px 0 22px}
+.tool-logo{background:#fffaf7;box-shadow:0 3px 10px rgba(38,19,16,.035)}
+@media(max-width:950px){.skills-grid{grid-template-columns:1fr}.tools-catalog{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.tools-catalog{grid-template-columns:1fr}}
