@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
  :root{
   --ink:#15161a;--muted:#454a52;--paper:#f7f4ee;--white:#fffefa;--line:#d9d5cd;
   --pink:#f0b7ad;--peach:#f3c98b;--coral:#e96855;--apricot:#f2a17f;--lilac:#e7e1ec;
@@ -304,3 +305,71 @@ h1,h2,h3,h4,.display,.serif,.experience-title,.subrole-title,.joy-card b,.metric
   .floating-note.two{bottom:10%;width:205px;font-size:13px;padding:15px 17px}
   .portrait-label{font-size:10px;padding:11px 16px}
 }
+
+/* ===== V11 — editorial refinement: classier type, softer surfaces, motion ===== */
+:root{--serif:'Cormorant Garamond','Instrument Serif',Georgia,serif;--ink:#0a1c2b;--muted:#3b5565;--paper:#faf8f3;--line:#d6e1e5;--ease:cubic-bezier(.22,1,.36,1)}
+::selection{background:var(--mist);color:var(--ink)}
+:focus-visible{outline:2px solid var(--ocean);outline-offset:3px}
+body{font-size:16px;line-height:1.72;-webkit-font-smoothing:antialiased}
+body:before{background-image:radial-gradient(55vw 55vh at 88% -8%,rgba(173,232,244,.5),transparent 62%),radial-gradient(38vw 40vh at -6% 42%,rgba(253,253,150,.2),transparent 62%);background-size:auto;mask-image:none;-webkit-mask-image:none}
+
+/* Typography */
+h1,h2,h3,h4,.display,.serif,.experience-title,.subrole-title,.joy-card b,.metric-number,.contact-link,.quote p,.health-status,.case-metric strong,.stakeholder strong,.slide-row strong,.cover-card h3,.day h3,.brand-mark,.hero .hero-years span{font-family:var(--serif)!important;font-weight:500!important}
+h1{font-size:clamp(3.1rem,5.8vw,5.6rem);line-height:.96;letter-spacing:-.025em}
+h2{font-size:clamp(2.4rem,3.8vw,3.8rem);line-height:1;letter-spacing:-.02em}
+h3{font-size:2rem;line-height:1.05}
+.hero-copy h1 span{color:inherit}
+.hero-copy h1 .accent,.hero-copy h1 .accent span{color:var(--ocean);font-style:italic}
+.eyebrow,.kicker{font-size:11px;letter-spacing:.24em}
+.kicker:before{content:"";display:inline-block;width:30px;height:1px;background:currentColor;margin-right:14px;vertical-align:middle}
+.metric-number{font-size:4rem;line-height:1}
+.hero .hero-years span{font-size:56px}
+.card-meta,.metric-label,.chip{letter-spacing:.14em}
+.marquee-group span{font-family:var(--serif);font-size:23px;font-style:italic;text-transform:none;letter-spacing:0;font-weight:500}
+
+/* Nav + buttons */
+.topbar{border-radius:999px;padding:0 10px 0 22px;border-color:rgba(10,28,43,.1);box-shadow:0 10px 40px rgba(0,91,138,.08);transition:top .4s var(--ease),box-shadow .4s var(--ease),background .4s}
+.topbar.scrolled{top:10px;box-shadow:0 14px 44px rgba(0,91,138,.16)}
+.brand-mark{border-radius:50%;font-size:20px}
+.topbar nav a:not(.nav-cta){position:relative}
+.topbar nav a:not(.nav-cta):after{content:"";position:absolute;left:12px;right:12px;bottom:5px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.topbar nav a:not(.nav-cta):hover:after,.topbar nav a.active:after{transform:scaleX(1)}
+.nav-cta{border-radius:999px;padding:9px 18px!important}
+.btn{border-radius:999px;padding:13px 24px;letter-spacing:.04em;transition:transform .45s var(--ease),box-shadow .45s var(--ease),background .3s,color .3s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(0,91,138,.2)}
+.btn.primary:hover{background:var(--ink);border-color:var(--ink)}
+
+/* Surfaces */
+.section{padding:120px 0}
+.project-card,.skills-panel,.cover-card,.contact-form,.linkedin-card,.case-metric,.stakeholder,.pdf-shell,.media-card{border-radius:22px}
+.project-card.featured{border-radius:22px}
+.project-card{transition:transform .6s var(--ease),box-shadow .6s var(--ease),border-color .3s}
+.project-card:hover{animation:none;transform:translateY(-8px)}
+.project-card:after,.thought-card:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .4s;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(0,180,216,.14),transparent 60%)}
+.project-card.featured:after{background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.16),transparent 60%)}
+.project-card:hover:after,.thought-card:hover:after{opacity:1}
+.thought-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.thought-card{position:relative;overflow:hidden;padding:34px 30px;border:1px solid var(--line);background:var(--white);border-radius:22px;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.thought-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.thought-card .number{font-size:10px;letter-spacing:.2em;font-weight:800;color:var(--ocean);margin-bottom:18px}
+.thought-card h3{font-size:2.1rem}
+
+/* Motion */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
+.reveal.show{opacity:1;transform:none}
+.hero-copy>*:not(h1){opacity:0;animation:rise 1s var(--ease) forwards}
+.hero-copy>*:nth-child(1){animation-delay:.05s}.hero-copy>*:nth-child(3){animation-delay:.7s}.hero-copy>*:nth-child(4){animation-delay:.8s}.hero-copy>*:nth-child(5){animation-delay:.9s}.hero-copy>*:nth-child(6){animation-delay:1s}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .06em .14em 0;margin-bottom:-.14em}
+.w>span{display:inline-block;transform:translateY(110%);animation:wordUp 1.1s var(--ease) forwards;animation-delay:calc(var(--i)*75ms + 150ms)}
+.portrait{clip-path:inset(0 0 100% 0);animation:imgIn 1.5s var(--ease) .25s forwards}
+.floating-note{animation:bob 6s ease-in-out infinite}.floating-note.two{animation-delay:-3s}
+.progress{position:fixed;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--ocean),var(--cyan));transform:scaleX(0);transform-origin:left;z-index:200}
+.cursor-ring{position:fixed;width:36px;height:36px;border:1px solid var(--ocean);border-radius:50%;pointer-events:none;z-index:99;transform:translate(-50%,-50%);transition:width .35s var(--ease),height .35s var(--ease),background .3s}
+body.hovering .cursor-ring{width:66px;height:66px;background:rgba(0,180,216,.12)}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes wordUp{to{transform:none}}
+@keyframes imgIn{to{clip-path:inset(0 0 0 0)}}
+@keyframes bob{50%{translate:0 -9px}}
+
+@media(max-width:850px){.thought-grid{grid-template-columns:1fr}.section{padding:85px 0}.topbar{border-radius:28px}.topbar.open nav{border-radius:22px}.hero .hero-years span{font-size:42px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.reveal,.hero-copy>*,.portrait,.w>span{opacity:1!important;transform:none!important;clip-path:none!important}}

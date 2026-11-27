@@ -34,3 +34,64 @@ document.addEventListener('DOMContentLoaded',()=>{
     });
   }
 });
+
+/* V11 motion layer */
+document.addEventListener('DOMContentLoaded',()=>{
+  const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const nav=document.querySelector('.topbar');
+
+  // staggered scroll reveals within each group
+  document.querySelectorAll('.reveal').forEach(el=>{
+    const sibs=[...el.parentElement.children].filter(c=>c.classList.contains('reveal'));
+    el.style.setProperty('--d',(sibs.indexOf(el)*.12)+'s');
+  });
+
+  // hero headline: word-by-word rise
+  const h1=document.querySelector('.hero h1');
+  if(h1&&!reduce){
+    let i=0;
+    const walk=node=>[...node.childNodes].forEach(n=>{
+      if(n.nodeType===3){
+        const frag=document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(t=>{
+          if(!t)return;
+          if(/^\s+$/.test(t)){frag.appendChild(document.createTextNode(' '));return}
+          const w=document.createElement('span');w.className='w';
+          const s=document.createElement('span');s.style.setProperty('--i',i++);s.textContent=t;
+          w.appendChild(s);frag.appendChild(w);
+        });
+        n.replaceWith(frag);
+      }else if(n.nodeType===1){
+        if(n.tagName==='SPAN'&&!n.className)n.classList.add('accent');
+        walk(n);
+      }
+    });
+    walk(h1);
+  }
+
+  // scroll progress, floating nav state, gentle portrait parallax
+  const bar=document.createElement('div');bar.className='progress';document.body.appendChild(bar);
+  const portrait=document.querySelector('.portrait-stage .portrait');
+  const onScroll=()=>{
+    const h=document.documentElement;
+    bar.style.transform='scaleX('+(h.scrollTop/((h.scrollHeight-h.clientHeight)||1))+')';
+    if(nav)nav.classList.toggle('scrolled',h.scrollTop>20);
+    if(portrait&&!reduce&&h.scrollTop<900)portrait.style.translate='0 '+(h.scrollTop*.06)+'px';
+  };
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // card spotlight that follows the pointer
+  document.querySelectorAll('.project-card,.thought-card').forEach(c=>c.addEventListener('pointermove',e=>{
+    const r=c.getBoundingClientRect();
+    c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');
+  }));
+
+  // smooth cursor ring (desktop only)
+  if(matchMedia('(pointer:fine)').matches&&!reduce){
+    const ring=document.createElement('div');ring.className='cursor-ring';document.body.appendChild(ring);
+    let x=0,y=0,rx=0,ry=0;
+    addEventListener('mousemove',e=>{x=e.clientX;y=e.clientY});
+    (function loop(){rx+=(x-rx)*.16;ry+=(y-ry)*.16;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop)})();
+    document.addEventListener('mouseover',e=>document.body.classList.toggle('hovering',!!e.target.closest('a,button,input,textarea,.skill-tag')));
+  }
+});
