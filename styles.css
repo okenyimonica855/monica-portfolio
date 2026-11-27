@@ -383,3 +383,239 @@ main{padding-top:76px}
  *,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
  .js .reveal{opacity:1!important;transform:none!important}
 }
+
+
+/* Final composition refinements — hero, inner-page art direction, and content rhythm */
+.home-hero{min-height:850px;padding-top:150px;padding-bottom:135px}
+.home-hero .hero-copy{width:55%;max-width:735px}
+.home-hero .hero-note{font-size:15px;line-height:1.8;max-width:590px;padding-left:18px}
+.home-hero .portrait-stage{left:36%;width:42%;top:0}
+.home-hero .portrait-toggle img{opacity:.96;filter:grayscale(1) contrast(1.08) brightness(1.02)}
+.home-hero .portrait-stage.is-color .portrait-toggle img{filter:grayscale(0) saturate(1.14) contrast(1.08) brightness(1.04)}
+.home-hero .portrait-label{display:none}
+.home-hero .hero-side-copy{right:4%;top:39%;width:255px}
+.home-hero .hero-side-copy h2{font-size:clamp(1.35rem,2vw,1.8rem);line-height:1.2}
+.home-hero .hero-side-copy p{font-size:14px;line-height:1.8;color:rgba(255,255,255,.76)}
+.home-hero .hero-side-link a{font-size:10px}
+.home-hero .hero-index{bottom:0;left:0;right:0;padding:19px 5.1% 21px;border-top:1px solid rgba(255,255,255,.2);background:rgba(5,20,14,.25)}
+.home-hero .hero-index div{gap:5px}
+.home-hero .hero-index b{font-size:11px}
+.home-hero .hero-index span{font-size:12px;letter-spacing:.01em}
+
+/* About: give the personal section its own editorial chapter */
+.about-page .page-hero{padding-top:90px;padding-bottom:55px}
+.about-page .page-hero h1{max-width:1040px}
+.about-page .story-section{align-items:start;gap:80px}
+.about-page .story-intro{position:sticky;top:112px}
+.about-page .story-intro h2{max-width:430px;font-size:clamp(2.3rem,4vw,3.65rem)}
+.about-page .story-copy{max-width:720px;padding-left:28px;border-left:1px solid var(--line)}
+.about-page .story-copy p{font-size:14px;line-height:1.95;color:#46534a;margin-bottom:19px}
+.about-page .beyond-cv-section{margin:30px 0 70px;padding:64px 5.1% 60px;background:#10271e;color:#fff;border-radius:0 0 48px 48px}
+.about-page .beyond-intro{display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:32px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.17)}
+.about-page .beyond-intro .kicker{color:var(--lime)}
+.about-page .beyond-intro h2{font-family:Manrope,sans-serif;font-size:clamp(2.7rem,4.5vw,4.5rem);font-weight:800;line-height:1;letter-spacing:-.08em;margin:10px 0 0;max-width:500px}
+.about-page .beyond-intro p{font-size:14px;color:rgba(255,255,255,.66);max-width:380px;margin:0 0 8px;line-height:1.8}
+.about-page .personal-collection{margin-top:43px}
+.about-page .collection-heading{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:20px}
+.about-page .collection-index{font:800 9px Manrope,sans-serif;letter-spacing:.14em;color:var(--lime)}
+.about-page .collection-heading h3{font:750 clamp(1.7rem,2.8vw,2.4rem)/1.1 Manrope,sans-serif;letter-spacing:-.06em;margin:9px 0 5px}
+.about-page .collection-heading p{font-size:12px;color:rgba(255,255,255,.62);margin:0}
+.about-page .collection-mark{font-size:26px;color:var(--lime);margin-bottom:8px}
+.about-page .movie-grid,.about-page .book-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.about-page .cover-card{display:grid;grid-template-columns:150px 1fr;align-items:center;min-height:180px;background:#1a382c;border:1px solid rgba(255,255,255,.12);transition:transform .35s,background .35s}
+.about-page .cover-card:hover{transform:translateY(-4px);background:#204432}
+.about-page .cover-card img{height:180px;width:100%;object-fit:cover;object-position:center}
+.about-page .cover-copy{padding:16px}
+.about-page .cover-card .meta{color:var(--lime)}
+.about-page .cover-card h3{font:750 16px Manrope,sans-serif;letter-spacing:-.04em;margin:6px 0}
+.about-page .cover-card p{font-size:10px;color:rgba(255,255,255,.62);margin:0}
+.about-page .book-collection{padding-top:38px;border-top:1px solid rgba(255,255,255,.16)}
+.about-page .joy-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:45px;align-items:start;margin-top:58px;padding-top:38px;border-top:1px solid rgba(255,255,255,.16)}
+.about-page .joy-intro .kicker{color:var(--lime)}
+.about-page .joy-intro h2{font:800 clamp(2rem,3vw,3rem)/1.04 Manrope,sans-serif;letter-spacing:-.07em;margin:9px 0 12px}
+.about-page .joy-intro p{font-size:12px;color:rgba(255,255,255,.65);max-width:430px;line-height:1.8}
+.about-page .joy-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.about-page .joy-card{background:#19382b;border:1px solid rgba(255,255,255,.12);padding:19px;min-height:128px;transition:transform .3s,background .3s}
+.about-page .joy-card:hover{transform:translateY(-4px);background:#224735}
+.about-page .joy-icon{background:rgba(185,223,108,.15);color:var(--lime)}
+.about-page .joy-card b{font:750 13px Manrope,sans-serif;color:#fff}
+.about-page .joy-card span{font-size:10px;color:rgba(255,255,255,.62);line-height:1.6}
+
+/* Experience: timeline with strong anchors and individual achievement panels */
+.experience-page .page-hero{margin-top:28px;padding:68px 5.1%;background:linear-gradient(120deg,#183d30,#0e251c);color:#fff;border-radius:0 0 46px 0}
+.experience-page .page-hero .kicker{color:var(--lime)}
+.experience-page .page-hero h1{font-size:clamp(3.1rem,5.8vw,5.6rem);max-width:920px}
+.experience-page .page-hero h1 span{color:#d8e9b3!important}
+.experience-page .page-hero p{color:rgba(255,255,255,.7);max-width:690px}
+.experience-page .page-hero:after{background:rgba(255,255,255,.2);margin-top:32px}
+.experience-page .section-tight{padding-top:44px}
+.experience-page .metrics{background:#fbfcf6;padding:0 24px;border:1px solid var(--line)}
+.experience-page .metric-cell{padding:25px 16px 25px 0}
+.experience-page .timeline{position:relative;border:0;padding-left:30px}
+.experience-page .timeline:before{content:"";position:absolute;left:7px;top:12px;bottom:22px;width:1px;background:#b7c99d}
+.experience-page .experience-item{position:relative;grid-template-columns:155px minmax(0,1fr);gap:34px;margin-bottom:17px;padding:27px 30px;background:#fbfcf6;border:1px solid var(--line);border-left:3px solid var(--green)}
+.experience-page .experience-item:before{content:"";position:absolute;left:-34px;top:35px;width:11px;height:11px;border:3px solid var(--paper);background:var(--lime-dark);border-radius:50%;box-shadow:0 0 0 1px var(--lime-dark)}
+.experience-page .experience-date{font-size:9px;line-height:1.6;letter-spacing:.12em;position:sticky;top:95px;align-self:start}
+.experience-page .experience-company{color:var(--green)}
+.experience-page .experience-title{font-size:clamp(1.8rem,2.5vw,2.35rem)}
+.experience-page .experience-item ul{padding-left:17px}
+.experience-page .experience-item li{font-size:12px;line-height:1.85}
+.experience-page .chips{margin-top:18px}
+.experience-page .chip{border-color:#cbd7c3;color:var(--green);background:#f2f6ed}
+.experience-page .subrole{border-top:1px solid #e0e6dc;margin-top:24px;padding-top:22px}
+.experience-page .subrole-title{font-size:24px}
+
+/* Work: dark project introduction and rich product/project presentation */
+.work-page .page-hero{margin-top:28px;padding:70px 5.1%;background:linear-gradient(122deg,#183d30,#0d251c);color:#fff;border-radius:0 0 48px 0}
+.work-page .page-hero .kicker{color:var(--lime)}
+.work-page .page-hero h1{font-size:clamp(3.1rem,5.9vw,5.7rem)}
+.work-page .page-hero h1 span{color:#d8e9b3!important}
+.work-page .page-hero p{color:rgba(255,255,255,.69);max-width:740px}
+.work-page .page-hero:after{background:rgba(255,255,255,.18);margin-top:32px}
+.work-page .section{padding-top:70px;padding-bottom:75px}
+.work-page .section:nth-of-type(2){background:#e8ede4}
+.work-page .section:nth-of-type(3){background:#10271e;color:#fff;padding-left:5.1%;padding-right:5.1%;margin:20px 0 0}
+.work-page .media-card{background:#fbfcf6;border:1px solid #d9e1d5;padding:10px;transition:transform .35s,box-shadow .35s}
+.work-page .media-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.work-page .media-card img{height:340px;object-fit:cover}
+.work-page .media-card figcaption{font-size:11px;line-height:1.6;padding:13px 6px 5px}
+.work-page .project-card{min-height:310px}
+.work-page .section:nth-of-type(3) .project-card{background:#1a3b2e;border-color:rgba(255,255,255,.15);color:#fff}
+.work-page .section:nth-of-type(3) .project-card p{color:rgba(255,255,255,.68)}
+.work-page .section:nth-of-type(3) .project-card.featured{background:#dce9c2;color:#17271e;border-color:#dce9c2}
+.work-page .section:nth-of-type(3) .project-card.featured p{color:#4a5b4d}
+.work-page .section:nth-of-type(3) .project-card.featured .card-meta{color:#38543b}
+
+/* Case studies: make the detail pages feel like designed reports rather than plain articles */
+.case-page .page-hero{margin-top:26px;padding:68px 5.1%;background:linear-gradient(120deg,#183d30,#0b241a);color:white;border-radius:0 0 46px 0}
+.case-page .page-hero .kicker{color:var(--lime)}
+.case-page .page-hero h1{font-size:clamp(3rem,5.5vw,5.2rem)}
+.case-page .page-hero h1 span{color:#d8e9b3!important}
+.case-page .page-hero p{color:rgba(255,255,255,.72);max-width:780px}
+.case-page .page-hero:after{background:rgba(255,255,255,.18);margin-top:30px}
+.case-page .case-nav{margin-top:22px;border:1px solid var(--line);padding:8px 10px}
+.case-page .case-section:nth-of-type(even){background:#e9eee5;padding-left:30px;padding-right:30px}
+.case-page .case-section h2{font-size:clamp(2rem,3.4vw,3.2rem)}
+.case-page .case-section .kicker{color:var(--green)}
+.case-page .health-board{box-shadow:0 18px 38px rgba(10,35,23,.12)}
+.case-page .pdf-shell{box-shadow:0 14px 40px rgba(10,35,23,.06)}
+.case-page .quote{background:#e7eee0;padding:24px 26px}
+.case-page .quote p{color:#183d30}
+
+/* Skills: separate tool directory from practical application */
+.skills-page .page-hero{margin-top:28px;padding:68px 5.1%;background:#e5eddf;border-bottom:1px solid #d7e1d1}
+.skills-page .page-hero h1{font-size:clamp(3rem,5.7vw,5.6rem)}
+.skills-page .page-hero h1 span{color:var(--green)!important}
+.skills-page .skills-grid{grid-template-columns:.92fr 1.08fr;gap:52px}
+.skills-page .skills-panel{padding:24px 0 0}
+.skills-page .tools-category{padding:16px 15px;background:#fafbf6;border:1px solid var(--line)}
+.skills-page .tools-category h3{font-size:10px;color:var(--green);letter-spacing:.1em;text-transform:uppercase}
+.skills-page .tool{min-height:47px}
+.skills-page .cert-list li{padding:16px 0}
+.skills-page .cert-list strong{font-size:14px}
+.skills-page .tool-practice-section{margin:35px 0 15px;padding:56px 5.1%;background:#10271e;color:#fff}
+.skills-page .tool-practice-intro{display:grid;grid-template-columns:.9fr 1.1fr;gap:8px 45px;align-items:end;margin-bottom:32px}
+.skills-page .tool-practice-intro .kicker{color:var(--lime);grid-column:1/-1}
+.skills-page .tool-practice-intro h2{font:800 clamp(2.2rem,4vw,3.7rem)/1.02 Manrope,sans-serif;letter-spacing:-.075em;max-width:580px;margin:0}
+.skills-page .tool-practice-intro p{font-size:13px;line-height:1.8;color:rgba(255,255,255,.68);max-width:460px;margin:0 0 4px}
+.skills-page .tool-practice-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.skills-page .practice-feature{position:relative;min-height:260px;padding:26px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+.skills-page .practice-dark{background:#1c4031;color:#fff}
+.skills-page .practice-light{background:#e4edcf;color:#17271d}
+.skills-page .practice-number{position:absolute;top:25px;left:26px;font:800 9px Manrope,sans-serif;letter-spacing:.12em;opacity:.78}
+.skills-page .practice-icon{position:absolute;right:25px;top:18px;font-size:40px;opacity:.3}
+.skills-page .practice-feature h3{font:750 23px Manrope,sans-serif;letter-spacing:-.05em;margin:0 0 9px}
+.skills-page .practice-feature p{font-size:12px;line-height:1.8;max-width:410px;margin:0;opacity:.76}
+
+/* Contact: a clear, generous invitation with a grounded, practical form */
+.contact-page .page-hero{margin-top:28px;padding:72px 5.1%;background:linear-gradient(120deg,#183d30,#0d241c);color:#fff;border-radius:0 0 48px 0}
+.contact-page .page-hero .kicker{color:var(--lime)}
+.contact-page .page-hero h1{font-size:clamp(3rem,5.3vw,5.25rem);max-width:1000px}
+.contact-page .page-hero h1 span{color:#d8e9b3!important}
+.contact-page .page-hero p{color:rgba(255,255,255,.72);font-size:14px;max-width:780px}
+.contact-page .page-hero:after{background:rgba(255,255,255,.18);margin-top:32px}
+.contact-page .contact-grid{align-items:start;gap:56px}
+.contact-page .contact-block{padding:25px 0;border-bottom:1px solid var(--line)}
+.contact-page .contact-block h3{font-size:24px}
+.contact-page .contact-link{font-size:clamp(1.25rem,2.1vw,1.9rem);overflow-wrap:anywhere}
+.contact-page .linkedin-card{padding:20px 0}
+.contact-page .contact-form{padding:34px;background:#10271e;color:#fff;border:0;box-shadow:0 22px 52px rgba(12,37,26,.12)}
+.contact-page .contact-form .field label{color:rgba(255,255,255,.82)}
+.contact-page .contact-form .field input,.contact-page .contact-form .field textarea{background:#f8f9f2;border-color:rgba(255,255,255,.35);color:#15211b}
+.contact-page .contact-form .field input:focus,.contact-page .contact-form .field textarea:focus{border-color:var(--lime);box-shadow:0 0 0 3px rgba(185,223,108,.16)}
+.contact-page .contact-form .form-status{color:rgba(255,255,255,.68)}
+.contact-page .contact-form .btn.orange{background:var(--lime);border-color:var(--lime);color:#15211b}
+.contact-page #message-form{padding-top:42px!important}
+.contact-page #message-form .section-head{align-items:end}
+
+/* Responsive adjustments for the bespoke sections */
+@media(max-width:950px){
+ .home-hero .hero-copy{width:63%}
+ .home-hero .hero-side-copy{top:58%;width:205px}
+ .about-page .story-section{gap:35px}
+ .about-page .cover-card{grid-template-columns:125px 1fr}
+ .experience-page .experience-item{grid-template-columns:125px minmax(0,1fr);gap:23px;padding:22px}
+ .skills-page .skills-grid{grid-template-columns:1fr;gap:28px}
+ .skills-page .tool-practice-intro{grid-template-columns:1fr;gap:12px}
+}
+@media(max-width:700px){
+ .home-hero{min-height:0;height:auto;padding:112px 22px 22px;display:flex;flex-direction:column;gap:12px;border-radius:0 0 30px 30px}
+ .home-hero .hero-copy{width:100%;max-width:none}
+ .home-hero .hero-years{margin-bottom:22px}
+ .home-hero h1{font-size:clamp(3.1rem,13vw,4.6rem);max-width:100%;line-height:.96}
+ .home-hero .hero-note{font-size:14px;line-height:1.75}
+ .home-hero .portrait-stage{position:relative;left:auto;top:auto;bottom:auto;width:100%;height:360px;min-height:0;margin:-10px 0 -2px;opacity:1;pointer-events:auto}
+ .home-hero .portrait-toggle img{object-fit:contain;object-position:center bottom;mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.4) 8%,#000 22%,#000 100%);mask-composite:initial}
+ .home-hero .hero-side-copy{position:relative;top:auto;right:auto;width:100%;max-width:420px;margin:3px 0 16px}
+ .home-hero .hero-side-copy h2{font-size:20px}
+ .home-hero .hero-side-copy p{font-size:13px}
+ .home-hero .hero-index{position:relative;left:auto;right:auto;bottom:auto;width:calc(100% + 44px);margin:8px -22px -22px;padding:17px 22px 18px;background:rgba(5,20,14,.28);grid-template-columns:1fr 1fr;gap:13px;border-top:1px solid rgba(255,255,255,.18)}
+ .home-hero .hero-index span{font-size:10px}
+ .home-hero .portrait-label{display:none}
+ .home-page .metric-number{font-size:2.45rem}
+ .about-page .story-section{grid-template-columns:1fr;gap:15px}
+ .about-page .story-intro{position:static}
+ .about-page .story-copy{padding-left:18px}
+ .about-page .beyond-cv-section{margin:18px 0 50px;padding:35px 22px 30px;border-radius:0 0 30px 30px}
+ .about-page .beyond-intro{grid-template-columns:1fr;gap:12px;padding-bottom:23px}
+ .about-page .beyond-intro h2{font-size:2.75rem}
+ .about-page .beyond-intro p{font-size:13px}
+ .about-page .personal-collection{margin-top:30px}
+ .about-page .collection-heading h3{font-size:1.7rem}
+ .about-page .movie-grid,.about-page .book-grid{grid-template-columns:1fr}
+ .about-page .cover-card{grid-template-columns:112px 1fr;min-height:148px}
+ .about-page .cover-card img{height:148px}
+ .about-page .cover-copy{padding:12px}
+ .about-page .cover-card h3{font-size:14px}
+ .about-page .joy-grid{grid-template-columns:1fr;gap:15px;margin-top:36px;padding-top:27px}
+ .about-page .joy-list{grid-template-columns:1fr 1fr}
+ .experience-page .page-hero,.work-page .page-hero,.case-page .page-hero,.contact-page .page-hero{margin-top:12px;padding:48px 22px 42px;border-radius:0 0 30px 0}
+ .experience-page .timeline{padding-left:19px}
+ .experience-page .timeline:before{left:3px}
+ .experience-page .experience-item{grid-template-columns:1fr;gap:8px;padding:20px 17px;margin-bottom:13px}
+ .experience-page .experience-item:before{left:-23px;top:25px;width:9px;height:9px}
+ .experience-page .experience-date{position:static;font-size:9px}
+ .experience-page .experience-title{font-size:27px}
+ .experience-page .metric-number{font-size:2.45rem}
+ .work-page .section{padding-top:50px;padding-bottom:55px}
+ .work-page .section:nth-of-type(3){padding-left:22px;padding-right:22px}
+ .work-page .media-card img{height:260px}
+ .case-page .case-section:nth-of-type(even){padding-left:18px;padding-right:18px}
+ .case-page .case-grid{gap:20px}
+ .case-page .case-nav{top:62px}
+ .skills-page .page-hero{margin-top:10px;padding:47px 22px 38px}
+ .skills-page .tool-practice-section{margin:15px 0 0;padding:36px 22px}
+ .skills-page .tool-practice-intro h2{font-size:2.45rem}
+ .skills-page .tool-practice-grid{grid-template-columns:1fr}
+ .skills-page .practice-feature{min-height:220px;padding:23px}
+ .contact-page .contact-grid{gap:26px}
+ .contact-page .contact-form{padding:22px}
+ .contact-page #message-form{padding-top:32px!important}
+}
+@media(max-width:430px){
+ .about-page .joy-list{grid-template-columns:1fr}
+ .home-hero .actions .btn{width:100%}
+ .home-hero .portrait-stage{height:315px}
+ .home-hero .hero-index{gap:10px}
+ .contact-page .contact-link{font-size:1.2rem}
+}
