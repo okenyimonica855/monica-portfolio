@@ -68,6 +68,8 @@ document.addEventListener('DOMContentLoaded',()=>{
       const active=stage.classList.toggle('is-color');
       button.setAttribute('aria-pressed',String(active));
       button.setAttribute('aria-label',active?'Show portrait in black and white':'Reveal Monica\'s portrait in full colour');
+      const prompt=button.querySelector('.portrait-prompt');
+      if(prompt)prompt.textContent=active?'Tap to return to black & white ↗':'Tap to bring the colour in ↗';
     });
   });
 
