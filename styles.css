@@ -750,3 +750,132 @@ main{padding-top:76px}
  .about-page .grid-2,.about-page .grid-3{gap:20px}
  .footer.wrap{padding:25px 20px 30px}
 }
+
+
+/* Fix project cards as real block/flex surfaces; prevent inline anchor background fragments */
+.project-card{
+ display:flex;
+ flex-direction:column;
+ justify-content:space-between;
+ align-items:stretch;
+ position:relative;
+ width:100%;
+ min-width:0;
+ min-height:300px;
+ padding:30px;
+ box-sizing:border-box;
+ overflow:hidden;
+ text-decoration:none;
+ vertical-align:top;
+ white-space:normal;
+}
+.project-card > div:first-child{min-width:0;width:100%}
+.project-card h3{
+ max-width:100%;
+ white-space:normal;
+ overflow-wrap:break-word;
+ text-wrap:balance;
+ line-height:1.15;
+}
+.project-card p{
+ max-width:100%;
+ white-space:normal;
+ overflow-wrap:break-word;
+ line-height:1.8;
+}
+.project-card .project-meta{
+ width:100%;
+ display:flex;
+ align-items:flex-end;
+ justify-content:space-between;
+ gap:16px;
+ margin-top:25px;
+}
+.project-card .chips{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.project-card .chip{display:inline-flex;align-items:center;white-space:nowrap}
+.project-card .arrow{flex:0 0 auto;line-height:1}
+.project-card:before,.project-card:after{pointer-events:none}
+.project-card:before{opacity:0!important}
+.project-card:hover:before{opacity:0!important}
+.home-page .project-card,.work-page .project-card{
+ display:flex;
+ flex-direction:column;
+ justify-content:space-between;
+}
+.work-page .case-selection-section .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.work-page .case-selection-section .project-card{
+ min-width:0;
+ min-height:340px;
+ padding:32px;
+}
+.home-page .work-section .grid-2{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+
+/* Keep Monica's portrait naturally coloured at every screen size */
+.home-hero .portrait{
+ filter:grayscale(0) saturate(1.1) contrast(1.05) brightness(1.03)!important;
+ opacity:1!important;
+ transform:none;
+ transition:transform .65s var(--ease),filter .65s var(--ease);
+}
+.home-hero .portrait-stage:hover .portrait{filter:grayscale(0) saturate(1.15) contrast(1.06) brightness(1.04)!important;transform:scale(1.012)}
+.home-hero .portrait-toggle,.home-hero .portrait-prompt{display:none!important}
+.home-hero .portrait-stage{pointer-events:none}
+
+/* Spread the orange/green gradient identity through the interior pages */
+.about-page .page-hero{
+ background:linear-gradient(112deg,#ef7138 0%,#d95e34 26%,#274b39 76%,#183d30 100%);
+ color:#fff;
+ padding:74px 5.1% 62px;
+ border-radius:0 0 42px 0;
+}
+.about-page .page-hero .kicker{color:#ffe0c5}
+.about-page .page-hero h1{color:#fff}
+.about-page .page-hero h1 span{color:#ffe0c5!important}
+.about-page .page-hero p{color:rgba(255,255,255,.82)}
+.about-page .page-hero .global-note{color:rgba(255,255,255,.82)}
+.about-page .page-hero .global-note span{background:#ffe0c5;color:#183d30}
+.experience-page .page-hero,
+.work-page .page-hero,
+.case-page .page-hero,
+.contact-page .page-hero{
+ background:linear-gradient(112deg,#ef7138 0%,#d95e34 28%,#274b39 78%,#10271e 100%);
+}
+.experience-page .page-hero .kicker,
+.work-page .page-hero .kicker,
+.case-page .page-hero .kicker,
+.contact-page .page-hero .kicker{color:#ffe0c5}
+.experience-page .page-hero h1 span,
+.work-page .page-hero h1 span,
+.case-page .page-hero h1 span,
+.contact-page .page-hero h1 span{color:#ffe0c5!important}
+.skills-page .page-hero{
+ background:linear-gradient(115deg,#ffe1cc 0%,#f3e9da 48%,#e4eddf 100%);
+ border-bottom:1px solid #d7ded4;
+}
+.skills-page .page-hero .kicker{color:var(--orange-deep)}
+.skills-page .page-hero h1 span{color:var(--green)!important}
+.work-page .case-selection-section{
+ background:linear-gradient(135deg,#122a20 0%,#183d30 58%,#6b3928 100%);
+}
+.work-page .case-selection-section .project-card.featured{
+ background:linear-gradient(135deg,#f17a42 0%,#f5a06d 100%);
+}
+.work-page .case-selection-section .project-card.project-nova{
+ background:linear-gradient(135deg,#1c4433 0%,#26553d 60%,#5b382b 100%);
+}
+.contact-page .contact-form{
+ background:linear-gradient(135deg,#122a20 0%,#183d30 65%,#633a2b 100%);
+}
+.transition-section{
+ background:linear-gradient(115deg,#fff1e5 0%,#f3eee3 42%,#e6eee2 100%);
+}
+.transition-heading .kicker{color:#c9572d}
+.transition-copy{border-left-color:#e8753e}
+@media(max-width:700px){
+ .work-page .case-selection-section .grid-2,
+ .home-page .work-section .grid-2{grid-template-columns:1fr}
+ .project-card{min-height:270px;padding:24px}
+ .work-page .case-selection-section .project-card{min-height:280px;padding:24px}
+ .home-page .work-section .project-card{min-height:280px;padding:24px}
+ .about-page .page-hero{padding:49px 22px 42px;margin-top:10px}
+}
