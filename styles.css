@@ -373,3 +373,81 @@ body.hovering .cursor-ring{width:66px;height:66px;background:rgba(0,180,216,.12)
 
 @media(max-width:850px){.thought-grid{grid-template-columns:1fr}.section{padding:85px 0}.topbar{border-radius:28px}.topbar.open nav{border-radius:22px}.hero .hero-years span{font-size:42px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.reveal,.hero-copy>*,.portrait,.w>span{opacity:1!important;transform:none!important;clip-path:none!important}}
+
+/* ===== V12 — "Maison" palette: ivory, forest green, brass. Quiet, sharp, editorial. ===== */
+:root{
+  --ink:#14120e;--muted:#4b473f;--paper:#f5f2eb;--white:#fcfaf5;--line:#dcd6c8;
+  --ocean:#1f3a32;--orange:#1f3a32;--orange-deep:#17302a;--cyan:#a98b4f;
+  --mist:#e7eae0;--sky:#d5ddd0;--sun:#e8dcc0;--butter:#e8dcc0;--soft:#ebe7dc;--pale:#e7eae0;--lilac:#ebe7dc;
+  --shadow:0 24px 60px rgba(20,18,14,.10)
+}
+/* flat paper with a whisper of grain instead of glowing gradients */
+body:before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");background-size:160px;opacity:.04;mask-image:none;-webkit-mask-image:none}
+.hero:after,.portrait-stage:after,.contact-form:before,.human:after{display:none}
+.project-card:after,.thought-card:after,.project-card:before{display:none}
+.cursor-dot{background:var(--ink)}
+
+/* type: lighter, larger display = more refined */
+h1,h2,.metric-number,.hero .hero-years span{font-weight:400!important}
+h1{letter-spacing:-.03em}
+.hero-copy h1 .accent,.hero-copy h1 .accent span{color:var(--ocean)}
+
+/* sharp, hairline surfaces */
+.topbar{border-radius:0;background:rgba(245,242,235,.92);border:1px solid var(--line);box-shadow:none}
+.topbar.scrolled{box-shadow:0 10px 30px rgba(20,18,14,.06)}
+.brand-mark{border-radius:0;background:transparent}
+.nav-cta{border-radius:0;border-color:var(--ink)}
+.btn{border-radius:0;letter-spacing:.1em;text-transform:uppercase;font-size:11px}
+.btn.primary{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.btn.primary:hover{background:var(--ocean);border-color:var(--ocean);box-shadow:none}
+.btn.ghost:hover{background:transparent;border-color:var(--ink);box-shadow:none}
+.project-card,.project-card.featured,.skills-panel,.cover-card,.contact-form,.linkedin-card,.case-metric,.stakeholder,.pdf-shell,.media-card,.thought-card,.human{border-radius:0}
+.project-card,.thought-card{background:var(--white);border-color:var(--line)}
+.project-card:hover,.thought-card:hover{border-color:var(--ink);box-shadow:none;transform:translateY(-4px)}
+.project-card.featured{background:var(--ocean);border-color:var(--ocean)}
+.project-card.featured p{color:#dfe5dc}
+.project-card.featured .card-meta{color:var(--sun)}
+.project-card.featured:hover{border-color:var(--cyan)}
+.chip{border-radius:0}
+.thought-card .number{color:var(--ocean)}
+.thought-card{border-top:2px solid var(--cyan)}
+
+/* hero details: no stickers, no tilt */
+.portrait-backdrop{background:var(--sky);opacity:.55;border-radius:0}
+.portrait-lines{border-color:rgba(20,18,14,.25);border-radius:0}
+.portrait,.portrait-stage:hover .portrait{filter:saturate(.9) contrast(1.02)}
+.portrait-stage:hover .portrait{filter:saturate(1) contrast(1.03);transform:translateY(-6px)}
+.floating-note,.portrait-stage:hover .floating-note.one,.portrait-stage:hover .floating-note.two{border-radius:0!important;transform:none!important;box-shadow:none;font-size:13px;font-weight:700;letter-spacing:.02em}
+.floating-note.one{background:var(--white);border:1px solid var(--ink)}
+.floating-note.two{background:var(--sun);border:1px solid var(--cyan);font-size:14px}
+.portrait-label{background:var(--ink);border-radius:0;border-color:var(--ink)}
+.global-note span{background:var(--white);border-color:var(--cyan);color:var(--ocean)}
+.hero-note{border-left-color:var(--cyan)}
+.skills-marquee{background:var(--white)}
+.skill-tag{background:var(--white);border-radius:0}
+.tool-icon{background:var(--mist)}
+
+/* About cards: calm, earthy, square */
+.joy-card{border-radius:0!important;border:1px solid var(--line)!important}
+.joy-card:nth-child(1){background:var(--mist)!important}
+.joy-card:nth-child(2){background:var(--sun)!important}
+.joy-card:nth-child(3){background:var(--sky)!important}
+.joy-card:nth-child(4){background:var(--ocean)!important}
+.joy-card:nth-child(4) b,.joy-card:nth-child(4) span{color:var(--paper)!important}
+.joy-icon,.joy-card:nth-child(2) .joy-icon{background:var(--ink)!important}
+.joy-card:nth-child(4) .joy-icon{background:var(--cyan)!important}
+
+/* dark panels: warm black + cream text */
+.human,.health-board{background:var(--ink)}
+.human p{color:#ddd7ca}.human-item{background:var(--ink)}.human-item span{color:#f1ece0}.human-item small{color:#a59f90}
+.health-board .case-metric strong,.health-status{color:var(--sun)}
+
+/* forms + focus */
+.field input,.field textarea{background:var(--white)}
+.field input:focus,.field textarea:focus{border-color:var(--ocean);box-shadow:0 0 0 3px rgba(31,58,50,.12)}
+:focus-visible{outline-color:var(--ocean)}
+.cursor-ring{border-color:var(--ink)}
+body.hovering .cursor-ring{background:rgba(169,139,79,.18)}
+.progress{background:linear-gradient(90deg,var(--ocean),var(--cyan))}
+.footer a,.contact-link{color:var(--ocean)!important}
+@media(max-width:850px){.topbar,.topbar.open nav{border-radius:0}}
